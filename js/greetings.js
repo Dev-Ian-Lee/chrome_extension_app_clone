@@ -32,6 +32,7 @@ function setVisible() {
   weather.classList.remove(HIDDEN_CLASSNAME);
 }
 
+//localStorage에서 사용자 이름 탐색
 const savedUserName = localStorage.getItem(USERNAME_KEY);
 
 if (savedUserName === null) {
