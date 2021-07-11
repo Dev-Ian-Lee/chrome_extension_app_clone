@@ -11,11 +11,19 @@ function handleToDoSubmit(event) {
 
   newToDoObject = { text: newToDo, id: Date.now() };
   toDos.push(newToDoObject);
+<<<<<<< HEAD
   paintToDo(newToDoObject);
   saveToDos();
 }
 
 function paintToDo(newToDo) {
+=======
+  printToDo(newToDoObject);
+  saveToDos();
+}
+
+function printToDo(newToDo) {
+>>>>>>> 0503052870a34ca8f8227a938359edb1b890781b
   const li = document.createElement("li");
   li.id = newToDo.id;
 
@@ -49,5 +57,9 @@ const savedToDos = localStorage.getItem(TODOS_KEY);
 if (savedToDos !== null) {
   const parsedToDos = JSON.parse(savedToDos);
   toDos = parsedToDos;
+<<<<<<< HEAD
   parsedToDos.forEach(paintToDo);
+=======
+  parsedToDos.forEach(printToDo);
+>>>>>>> 0503052870a34ca8f8227a938359edb1b890781b
 }

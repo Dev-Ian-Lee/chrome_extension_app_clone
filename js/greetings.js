@@ -45,7 +45,11 @@ if (savedUserName === null) {
   weather.classList.add(HIDDEN_CLASSNAME);
 } else {
   // if username is saved, don't show login form. Instead, show welcome message.
+<<<<<<< HEAD
   loginForm.classList.add(HIDDEN_CLASSNAME);
+=======
+  loginForm.add(HIDDEN_CLASSNAME);
+>>>>>>> 0503052870a34ca8f8227a938359edb1b890781b
   paintGreetings(savedUserName);
   setVisible();
 }
