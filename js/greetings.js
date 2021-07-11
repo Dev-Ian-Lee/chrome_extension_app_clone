@@ -27,5 +27,6 @@ if (savedUserName === null) {
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   // if username is saved, don't show login form. Instead, show welcome message.
+  loginForm.add(HIDDEN_CLASSNAME);
   paintGreetings(savedUserName);
 }
