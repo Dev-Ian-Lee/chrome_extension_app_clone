@@ -35,7 +35,7 @@ function setVisible() {
 const savedUserName = localStorage.getItem(USERNAME_KEY);
 
 if (savedUserName === null) {
-  // if username is not saved, show login form
+  // 사용자 이름 저장되어 있을 경우
   loginForm.classList.remove(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
   clock.classList.add(HIDDEN_CLASSNAME);
@@ -44,12 +44,8 @@ if (savedUserName === null) {
   quote_container.classList.add(HIDDEN_CLASSNAME);
   weather.classList.add(HIDDEN_CLASSNAME);
 } else {
-  // if username is saved, don't show login form. Instead, show welcome message.
-<<<<<<< HEAD
+  // 저장되어 있지 않을 경우
   loginForm.classList.add(HIDDEN_CLASSNAME);
-=======
-  loginForm.add(HIDDEN_CLASSNAME);
->>>>>>> 0503052870a34ca8f8227a938359edb1b890781b
   paintGreetings(savedUserName);
   setVisible();
 }
