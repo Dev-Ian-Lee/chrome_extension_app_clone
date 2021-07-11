@@ -9,27 +9,23 @@
     <link rel="icon" type="image/png" href="http://example.com/myicon.png" />
   </head>
   <body>
-    <form class="login_form hidden">
-      <input
-        required
-        maxlength="15"
-        type="text"
-        placeholder="What is your name?"
-      />
+    <form id="login_form" class="hidden">
+      <span>Hello, What is your name?</span>
+      <input required maxlength="30" type="text" size="30" />
       <button>LogIn</button>
     </form>
 
-    <h2 id="clock"></h2>
+    <span id="clock"></span>
     <h1 id="greeting" class="hidden"></h1>
     <form id="todo-form">
-      <input
-        type="text"
-        placeholder="write a To Do and press enter."
-        required
-      />
+      <input type="text" placeholder="New ToDo" required size="30" />
     </form>
     <ul id="todo-list"></ul>
     <div id="quote">
+      <span></span>
+      <span class="hidden"></span>
+    </div>
+    <div id="weather">
       <span></span>
       <span></span>
     </div>
@@ -38,5 +34,6 @@
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/weather.js"></script>
   </body>
 </html>

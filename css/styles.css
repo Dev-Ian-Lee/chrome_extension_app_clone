@@ -1,3 +1,119 @@
 .hidden {
+  /* 속성 selector가 클래스 selector보다 우선순위가 높아 flexbox에는 hidden 클래스가 적용되지 않는 것을 방지하기 위해 우선순위 조정*/
+  display: none !important;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#login_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#login_form span {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+input {
+  color: white;
+  font-size: 30px;
+
+  /* 왼쪽이 아닌 중간부터 입력 시작 */
+  text-align: center;
+
+  /* input box 테두리 하단에만 부여 */
+  border: none;
+  border-bottom: 1px solid white;
+
+  /* input box 배경 투명하게 */
+  background-color: transparent;
+  margin: 50px 0px;
+}
+
+/* input box focus시 효과 제거*/
+input:focus {
+  outline: none;
+}
+
+#login_form button {
   display: none;
+}
+
+#clock {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#greeting {
+  margin-bottom: 100px;
+}
+
+#todo-form input {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+/* placeholder의 색상 변경 */
+#todo-form input::placeholder {
+  color: white;
+}
+
+#todo-list {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#todo-list li {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#todo-list button {
+  font-size: 20px;
+  color: white;
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+}
+
+/* 절대위치로 배치 */
+#quote {
+  font-size: 20px;
+  position: absolute;
+  bottom: 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#weather {
+  font-size: 20px;
+  position: absolute;
+  top: 2%;
+  right: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#weather span:last-child {
+  font-size: 15px;
 }

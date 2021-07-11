@@ -60,3 +60,14 @@ const author = document.querySelector("#quote span:last-child");
 const randomQuotes = quotes[Math.floor(Math.random() * quotes.length)];
 quote.innerText = randomQuotes.quote;
 author.innerText = randomQuotes.author;
+
+function showAuthor() {
+  author.classList.remove(HIDDEN_CLASSNAME);
+}
+
+function hideAuthor() {
+  author.classList.add(HIDDEN_CLASSNAME);
+}
+
+quote_container.addEventListener("mouseover", showAuthor);
+quote_container.addEventListener("mouseout", hideAuthor);
